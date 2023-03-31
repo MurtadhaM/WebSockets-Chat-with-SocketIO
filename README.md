@@ -3,7 +3,7 @@
 ---
 
 #### DEMO
-<img src="demo.gif" >
+<img src="Demo.gif" >
 </img>
 ### Features
 - [x] User can join a room
