@@ -1,0 +1,18 @@
+{
+  "name": "server-for-socket-io-client",
+  "author": "Murtadha Marzouq",
+  "version": "6.6.6",
+  "description": "An awesome server for socket.io client",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+
+  "keywords": [],
+  "license": "apache-2.0",
+  "dependencies": {
+    "socket.io": "^3.0.4",
+    "express": "^4.17.1"
+  }
+}

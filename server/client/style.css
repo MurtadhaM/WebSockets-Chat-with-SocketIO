@@ -1,0 +1,222 @@
+/**
+Author: Murtadha Marzouq    
+*/
+
+body {
+    margin: 0;
+    padding-bottom: 3rem;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+form {
+    background: rgba(0, 0, 0, 0.15);
+    padding: 0.25rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    height: 3rem;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+}
+
+input {
+    border: none;
+    padding: 0 1rem;
+    flex-grow: 1;
+    border-radius: 2rem;
+    margin: 0.25rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    background: #333;
+    border: none;
+    padding: 0 1rem;
+    margin: 0.25rem;
+    border-radius: 3px;
+    outline: none;
+    color: #fff;
+}
+
+button:hover {
+    background: #555;
+}
+
+p {
+    max-width: 500px;
+    margin-bottom: 12px;
+    line-height: 24px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+}
+
+
+.sent {
+    flex-direction: row-reverse;
+    margin-right: 30px !important;
+
+
+}
+
+.received {
+    margin-left: 30px !important;
+}
+
+.sent p {
+    color: white;
+    background: #0b93f6;
+    align-self: flex-end;
+
+}
+
+
+.received p {
+    background: hsl(240, 11%, 91%);
+    color: black;
+}
+
+.nickname {
+
+    color: rgb(8, 0, 255) !important;
+}
+
+.timerecieved {
+    color: rgb(255, 0, 0);
+    right: 0 !important;
+    margin-left: 80% !important;
+    margin-top: -20px !important;
+    font-size: 10px !important;
+
+}
+
+.timesent {
+    color: rgb(255, 0, 0);
+    left: 0 !important;
+    margin-right: 80% !important;
+    margin-top: -30px !important;
+    font-size: 10px !important;
+}
+
+.message li {
+    list-style: none;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+}
+
+.typing-indicator {
+    background-color: #E6E7ED;
+    will-change: transform;
+    width: auto;
+    border-radius: 50px;
+    padding: 20px;
+    display: table;
+    margin: 0 auto;
+    position: relative;
+    -webkit-animation: 2s bulge infinite ease-out;
+    animation: 2s bulge infinite ease-out;
+}
+
+.typing-indicator::before,
+.typing-indicator::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #E6E7ED;
+}
+
+.typing-indicator::after {
+    height: 10px;
+    width: 10px;
+    left: -10px;
+    bottom: -10px;
+}
+
+.typing-indicator span {
+    height: 15px;
+    width: 15px;
+    float: left;
+    margin: 0 1px;
+    background-color: #9E9EA1;
+    display: block;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.typing-indicator span:nth-of-type(1) {
+    -webkit-animation: 1s blink infinite 0.3333s;
+    animation: 1s blink infinite 0.3333s;
+}
+
+.typing-indicator span:nth-of-type(2) {
+    -webkit-animation: 1s blink infinite 0.6666s;
+    animation: 1s blink infinite 0.6666s;
+}
+
+.typing-indicator span:nth-of-type(3) {
+    -webkit-animation: 1s blink infinite 0.9999s;
+    animation: 1s blink infinite 0.9999s;
+}
+
+@-webkit-keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes bulge {
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes bulge {
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.isTyping {
+    scale: .5
+}
+
+.isTyping.typing-indicator {
+    display: inline-flex;
+}
+
+li {
+    list-style: none;
+}
+
+.message.received {
+    margin-bottom: 10px;
+}
+
+.message.sent {
+    margin-bottom: 10px;
+}

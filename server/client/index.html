@@ -1,0 +1,166 @@
+<!-- Murtadha's Best Chat App -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- BULMA-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-3.0.0.js"></script>
+    <!-- FONT AWESOME-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/fontawesome.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script defer src="app.js"></script>
+
+</head>
+<script>
+    function closeModal() {
+        $('.modal').removeClass('is-active');
+    }
+</script>
+
+<body>
+
+    <h1 class="is-size-1 is-family-primary  has-text-info has-text-centered">Murtadha's Best Chat App
+        <li class="fas fa-comments"></li>
+    </h1>
+
+    <!-- DISCLAIMER-->
+    <div class="modal is-active">
+        <div class="modal-background"></div>
+
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">DISCLAIMER</p>
+                <button class="delete" aria-label="close" onclick="closeModal()">
+                    <li class="fas fa-times"></li>
+                </button>
+            </header>
+            <section class="modal-card-body">
+                <div class="modal-body">
+                    <div class="notification is-warning">
+                        <p class="is-size-5 is-family-primary  has-text-info">
+                            <!-- TASKS COMPLETED-->
+                        <h1 class="is-size-4 is-family-primary  has-text-info">Users can enter a chatroom</h1>
+
+                        <li class="fas fa-check">
+
+                        </li>
+                        <h1 class="is-size-4 is-family-primary  has-text-info">Users can enter a chatroom</h1>
+
+                        <li class="fas fa-check"></li>
+                        <h1 class="is-size-4 is-family-primary  has-text-info">Users can join and leave the chatroom
+                        </h1>
+
+                        <li class="fas fa-check"></li>
+                        <h1 class="is-size-4 is-family-primary  has-text-info">Users can send messages to the chatroom
+                        </h1>
+
+                        <li class="fas fa-check"></li>
+                        <h1 class="is-size-4 is-family-primary  has-text-info">Users can see all messages sent to the
+                            chatroom</h1>
+
+                        <li class="fas fa-check"></li>
+                        <h1 class="is-size-4 is-family-primary  has-text-info">Users can see who is online</h1>
+
+                        <li class="fas fa-check"></li>
+                        <h1 class="is-size-5 is-family-primary  has-text-info">"Typing" indicator: This almost broke my
+                            will to live</h1>
+
+                        <li class="fas fa-check"></li>
+                        <h1 class="is-size-4 is-family-primary  has-text-info">Excellent UI</h1>
+
+                        </p>
+                    </div>
+                </div>
+                <footer class="modal-card-foot">
+                    <button class="button is-success button is-large is-fullwidth" onclick="closeModal()">I
+                        understand</button>
+                </footer>
+            </section>
+        </div>
+    </div>
+    <!-- Login Form -->
+    <form id="login-form" class="login-form login">
+        <input id="nickname" class="input" type="text" placeholder="Enter your nickname">
+        <button id="login-button" class="button is-success" type="submit">Set Nickname</button>
+    </form>
+
+
+    <!-- Chat App -->
+    <div id="ChatApp" style="display: none;">
+        <!-- LOGOUT BUTTON-->
+        <div class="logout">
+            <button id="logout-button" class="button is-danger  button is-large is-fullwidth"
+                type="submit">Logout</button>
+        </div>
+
+        <div class="columns is-one-quarter">
+
+
+            <div class="column is-three-quarters ">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <p class="title is-4">Messages</p>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div id="messages">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-content">
+                                <li class="fas fa-users"></li>
+                                <h1 class="is-size-4 is-family-primary  has-text-info">Users Online</h1>
+
+
+                            </div>
+                        </div>
+                        <div class="content">
+                            <ul id="users-list">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="message-form">
+
+            <form id="message-form">
+                <input id="SendMessage" autocomplete="off" type="text" placeholder="Enter your message">
+                <button id="send-button" class="button is-warning" type="submit">Send</button>
+            </form>
+
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
