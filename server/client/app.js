@@ -1,7 +1,7 @@
 /**
  * Author: Murtadha Marzouq
  */
-const socket = io('ws://localhost:1633');
+const socket = io('ws://45.55.32.24:1644');
 
 let users = [];
 let currentUser = {

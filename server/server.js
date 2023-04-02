@@ -10,8 +10,8 @@ const io = require('socket.io');
 
 
 
-const server = app.listen(1633, () => {
-    console.log('Server running on http://localhost:1633');
+const server = app.listen(1644, () => {
+    console.log('Server running on http://45.55.32.24:1644');
 }
 );
 
