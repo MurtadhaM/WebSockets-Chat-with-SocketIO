@@ -6,14 +6,22 @@
 <img src="Demo.gif" >
 </img>
 ### Features
-- [x] User can join a room
-- [x] User can send a message
-- [x] User can see who is online
-- [x] User can see who is typing
-- [x] User can disconnect from a room
-- [x] User can see the time of the message
-- [x] User can see the date of the message
-- [x] User can see the number of users in the room
+
+- [ ] User can join a room
+
+- [ ] User can send a message
+
+- [ ] User can see who is online
+
+- [ ] User can see who is typing
+
+- [ ] User can disconnect from a room
+
+- [ ] User can see the time of the message
+
+- [ ] User can see the date of the message
+
+- [ ] User can see the number of users in the room
 ## Installation
 
 ```bash
